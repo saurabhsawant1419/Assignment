@@ -8,14 +8,15 @@ const menSchema=new mongoose.Schema({
         type:String
     },
     team:{
-        enum: ['CSK','MI','DC','KKR','RCB','RR','SRH','PK'],
-        default : 'CSK'
+        type:String,
+        enum: ['CSK','MI','DC','KKR','RCB','RR','SRH','PK']
     },
     country:{
         type:String
     },
     rating:{
-        type:String
+        type:String,
+        enum: ['A+','A','B+','B','C+','C']
     }
 })
 
