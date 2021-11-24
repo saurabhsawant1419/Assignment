@@ -7,9 +7,11 @@ const menSchema=new mongoose.Schema({
     name:{
         type:String
     },
-    team:{
+    team:
+    {
+        team: ['CSK','MI','DC','KKR','RCB','RR','SRH','PK'],
         type:String,
-        enum: ['CSK','MI','DC','KKR','RCB','RR','SRH','PK']
+        enum: team
     },
     country:{
         type:String

@@ -88,6 +88,7 @@ app.get("/mens", async(req,res) => {
       res.send(getteam)
     }catch(e){
       res.status(400).send(e)
+      
     }
    })
 
