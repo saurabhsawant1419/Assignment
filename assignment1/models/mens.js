@@ -1,5 +1,6 @@
 const express=require("express");
 const mongoose= require("mongoose");
+//var teams= ['CSK','MI','DC','KKR','RCB','RR','SRH','PK'];
 const menSchema=new mongoose.Schema({
     ranking:{
         type:Number
@@ -9,9 +10,8 @@ const menSchema=new mongoose.Schema({
     },
     team:
     {
-        team: ['CSK','MI','DC','KKR','RCB','RR','SRH','PK'],
-        type:String,
-        enum: team
+        type:[String],
+        enum:['CSK','MI','DC','KKR','RCB','RR','SRH','PK']
     },
     country:{
         type:String

@@ -60,8 +60,8 @@ app.get("/mens", async(req,res) => {
 
    app.get("/ranking", async(req,res) => {
     try{
-      const ranking=req.params.ranking;
-      const getranks = await MensRanking.find(ranking).limit(10).exec();
+      //const ranking=req.params.ranking;
+      const getranks = await MensRanking.find().sort({ ranking: 1 }).limit(10).exec()
       
       res.send(getranks)
     }catch(e){
